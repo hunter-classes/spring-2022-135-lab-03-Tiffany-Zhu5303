@@ -23,8 +23,8 @@ int main(){
   std::string compare = compare_basins(date);
   std::cout << compare << "\n";
 
-  std::string date1 = "05/03/18";
-  std::string date2 = "11/15/18";
+  std::string date1 = "05/03/2018";
+  std::string date2 = "11/15/2018";
 
   reverse_oreder(date1, date2);
   return 0;

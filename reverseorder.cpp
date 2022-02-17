@@ -36,10 +36,10 @@ void reverse_oreder(std::string date1, std::string date2){
   }
 
   //prints west basin elevation in reverse chronological order
-  for(int i = count; i >= 0; i--){
+  for(int i = end; i >= start; i--){
     if(west_basin_el[i] > 0){
     std::cout << days[i] << " " << west_basin_el[i] << std::endl;
     }
-  }
+    }
   
 }
