@@ -8,8 +8,10 @@ main.o: main.cpp reservoir.h
 
 reservoir.o: reservoir.cpp reservoir.h
 	g++ -c reservoir.cpp
+
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) main
+
 help:
 	@echo "Targets:"
 	@echo "  main"

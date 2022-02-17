@@ -2,19 +2,16 @@
 #include <fstream>
 #include <cstdlib>
 #include <climits>
+#include <string>
 
 #include "reservoir.h"
 
-double get_east_storage(std::string date);
+int main(){
+  
+  std::string date = "04/18/2018";
 
-int main()
-{
-  std::string date;
-  cout << "Enter a date in the format mmddyyyy: " << std::endl;
-  cin >> date;
-
-  data = get_east_storage(date);
-
+  double storage = get_east_storage(date);
+  std::cout << storage;
   
   return 0;
 }
