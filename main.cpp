@@ -5,6 +5,7 @@
 #include <string>
 
 #include "reservoir.h"
+#include "reverseorder.h" 
 
 int main(){
   
@@ -21,6 +22,10 @@ int main(){
 
   std::string compare = compare_basins(date);
   std::cout << compare << "\n";
-  
+
+  std::string date1 = "05/03/18";
+  std::string date2 = "11/15/18";
+
+  reverse_oreder(date1, date2);
   return 0;
 }
