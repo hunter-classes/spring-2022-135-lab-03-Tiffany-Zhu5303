@@ -103,3 +103,30 @@ double get_max_east(){
     
   return max;
 }
+
+std::string compare_basins(std::string date){
+
+  std::ifstream fin("Current_Reservoir_Levels.tsv");
+  
+  if (fin.fail()){
+    std::cerr << "File cannot be opened for reading." << std::endl;
+    exit(1);
+  }
+  
+  std::string junk, day, eastSt, eastEl, westSt, westEl, comparison; 
+  getline(fin, junk);
+  
+  while(fin >> day >> eastSt >> eastEl >> westSt >> westEl){
+    fin.ignore(INT_MAX, '\n');
+
+    if(date == day && eastEl < westEl){
+      comparison = "West";
+    }else if(date == day && westEl < eastEl){
+      comparison = "East";
+    }else if(date == day && westEl == eastEl){
+      comparison = "Equal";
+    }
+  }
+  
+  return comparison;
+}

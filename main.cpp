@@ -18,6 +18,9 @@ int main(){
 
   double max_storage = get_max_east();
   std::cout << max_storage << "\n";
+
+  std::string compare = compare_basins(date);
+  std::cout << compare << "\n";
   
   return 0;
 }
